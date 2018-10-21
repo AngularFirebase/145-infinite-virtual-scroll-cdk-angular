@@ -1,0 +1,19 @@
+<ng-container *ngIf="infinite | async as people">
+
+
+  <cdk-virtual-scroll-viewport itemSize="100" (scrolledIndexChange)="nextBatch($event, (people[people.length - 1].name))">
+
+
+    <li *cdkVirtualFor="let p of people; let i = index; trackBy: trackByIdx" class="animated lightSpeedIn">
+      <h2>{{ i }}. {{ p.emoji }} {{ p.name }}</h2>
+      <p> {{ p.bio }} </p>
+    </li>
+
+
+
+    <iframe style="margin: 0 auto; display: flex" *ngIf="theEnd" src="https://giphy.com/embed/lD76yTC5zxZPG" width="480"
+      height="352" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+  </cdk-virtual-scroll-viewport>
+
+</ng-container>

@@ -1,0 +1,29 @@
+cdk-virtual-scroll-viewport {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  li {
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    background: whitesmoke;
+
+    box-shadow: 2px 2px 3px rgba($color: #888888, $alpha: 0.2);
+  }
+  &::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(238, 169, 79);
+  }
+}

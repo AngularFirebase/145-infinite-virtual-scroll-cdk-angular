@@ -1,0 +1,10 @@
+<cdk-virtual-scroll-viewport itemSize="100">
+
+
+  <li *cdkVirtualFor="let p of people;" class="animated slideInRight">
+    <h2>{{ p.emoji }} {{ p.name }}</h2>
+    <p> {{ p.bio }} </p>
+  </li>
+
+
+</cdk-virtual-scroll-viewport>
